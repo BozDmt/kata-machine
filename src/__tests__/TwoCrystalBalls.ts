@@ -1,10 +1,11 @@
 import two_crystal_balls from "@code/TwoCrystalBalls";
 
 test("two crystal balls", function () {
-    let idx = Math.floor(Math.random() * 10000);
-    const data = new Array(10000).fill(false);
+    const arrLen = 10000
+    let idx = Math.floor(Math.random() * arrLen);
+    const data = new Array(arrLen).fill(false);
 
-    for (let i = idx; i < 10000; ++i) {
+    for (let i = idx; i < arrLen; ++i) {
         data[i] = true;
     }
 

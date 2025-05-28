@@ -2,7 +2,7 @@ import Queue from "@code/Queue";
 
 test("queue", function () {
     const list = new Queue<number>();
-
+    
     list.enqueue(5);
     list.enqueue(7);
     list.enqueue(9);
@@ -28,4 +28,6 @@ test("queue", function () {
     list.enqueue(69);
     expect(list.peek()).toEqual(69);
     expect(list.length).toEqual(1);
+    expect(list.contains(69)).toEqual(true);
+    expect(list.peekAt(0)).toEqual(69);
 });
