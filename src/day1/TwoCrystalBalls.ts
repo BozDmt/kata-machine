@@ -3,7 +3,7 @@ export default function two_crystal_balls(breaks: boolean[]): number {
     //const building:boolean[]=[50]; ordered array
     
     const jumpAmount:number = Math.floor(Math.sqrt(breaks.length))
-    let j=0,i = jumpAmount
+    let j = 0,i = jumpAmount
     while(i < breaks.length){
         if(breaks[i]){
            break

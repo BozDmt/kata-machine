@@ -15,3 +15,19 @@ export default function bs_list(haystack: number[], needle: number): boolean {
     }while(lo < hi);
     return false
 }
+export function bs_list1(haystack: number[], needle: number):number|undefined{
+    let lo = 0;
+    let hi = haystack.length;    
+
+    do{
+        const m = Math.floor(lo + (hi - lo)/2);
+        const v = haystack[m]
+        if(v === needle)
+            return m
+        else if(v > needle)
+            hi = m
+        else
+            lo = m + 1
+    }while(lo < hi);
+    return undefined
+}
