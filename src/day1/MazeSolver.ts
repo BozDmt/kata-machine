@@ -28,7 +28,7 @@ function helper(maze:string[],wall:string,curr:Point, end:Point,seen:boolean[][]
     path.push(curr)
     //recurse
     //in all 4 directions
-    for(let i =0; i< dir.length; ++i){
+    for(let i =0; i< dir.length/*=4*/; ++i){
         const [x,y] = dir[i]
         if(helper(maze,wall,{
             x:curr.x + x,
